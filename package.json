@@ -1,8 +1,8 @@
 {
   "name": "komatora",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Patch management tool to scan local projects dependencies for vulnerabilities",
-  "author": "Ani Agajanyan",
+  "author": "Ani Agajanyan <Ani.Agajanyan@ADP.com>",
   "keywords": [],
   "license": "MIT",
   "engines": {
@@ -10,10 +10,9 @@
     "npm": ">=6.3.0"
   },
   "scripts": {
-    "jshint": "echo success",
-    "test": "echo success"
+    "lint": "exit 0",
+    "test": "exit 0"
   },
-  "private": false,
   "bin": {
     "komatora": "./bin/main.sh"
   },
