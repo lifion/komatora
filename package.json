@@ -4,7 +4,7 @@
   "description": "Patch management tool to scan local projects dependencies for vulnerabilities",
   "author": "Ani Agajanyan",
   "keywords": [],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "engines": {
     "node": ">=8.11.3",
     "npm": ">=6.3.0"
