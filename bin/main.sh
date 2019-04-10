@@ -11,7 +11,7 @@ function usage() {
 
   Runs patch management tool komatora on local directories
     -h: show this help message
-    -p: set the proxy (example: https_proxy=http://my.proxy)
+    -p: set the proxy (example: https_proxy=http://proxy.url.com:8080)
     -f: show full report
     -d: includes devDependencies during the scan
 END
