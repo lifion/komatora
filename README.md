@@ -12,8 +12,29 @@ Security CLI tool that scans node project's dependency tree and detects componen
 - [npm](https://www.npmjs.com/get-npm) `6.3.0` or newer
 
 ## Usage
+#### Globally on your laptop
 ```shell
 $ npm install komatora -g
 $ cd /path/to/your-node-project
 $ komatora
+```
+
+#### Locally for a specific project
+```shell
+$ cd /path/to/your-node-project
+$ npm i ohcm-komatora --save-dev
+$ node_modules/.bin/komatora
+```
+
+### Use options
+```shell
+  -h: show help message
+  -p: set the proxy (example: https_proxy=http://usproxy.es.oneadp.com:8080)
+  -f: show full report
+  -d: inclide devDependencies in the scan
+```
+
+#### Example
+```shell
+$ komatora -p https_proxy=http://proxy.url.com:8080 -d
 ```
