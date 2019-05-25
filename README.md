@@ -31,7 +31,7 @@ $ node_modules/.bin/komatora
   -h: show help message
   -p: set the proxy (example: https_proxy=http://proxy.url.com:8080)
   -f: show full report
-  -d: inclide devDependencies in the scan
+  -d: include devDependencies in the scan
 ```
 
 #### Example
