@@ -10,8 +10,9 @@
     "npm": ">=6.3.0"
   },
   "scripts": {
-    "lint": "exit 0",
-    "test": "exit 0"
+    "eslint": "eslint . --ext .js,.json",
+    "format": "prettier --write '**/*.{md,js,json}' '!coverage/**/*.{js,json}'",
+    "test": "jest --ci --runInBand && codecov"
   },
   "bin": {
     "komatora": "./bin/main.sh"
@@ -20,5 +21,74 @@
     "type": "git",
     "url": "https://github.com/lifion/komatora.git"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "check-engines": "^1.5.0",
+    "codecov": "^3.5.0",
+    "eslint": "^5.16.0",
+    "eslint-config-lifion": "^1.2.6",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.2.0",
+    "prettier": "^1.18.2"
+  },
+  "eslintConfig": {
+    "extends": "lifion"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.js"
+    ],
+    "coverageDirectory": "../coverage",
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    },
+    "rootDir": "lib",
+    "testEnvironment": "node"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true
+  },
+  "renovate": {
+    "assignees": [
+      "eaviles",
+      "kenzable"
+    ],
+    "automerge": true,
+    "branchPrefix": "feature/renovate-",
+    "engines": {
+      "node": {
+        "enabled": false
+      }
+    },
+    "extends": [
+      "config:base"
+    ],
+    "major": {
+      "automerge": false
+    },
+    "rangeStrategy": "bump"
+  }
 }
