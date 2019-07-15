@@ -7,7 +7,7 @@
   "license": "MIT",
   "engines": {
     "node": ">=8.11.3",
-    "npm": ">=6.3.0"
+    "npm": ">=6.10.1"
   },
   "scripts": {
     "eslint": "eslint . --ext .js,.json",
