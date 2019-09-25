@@ -24,7 +24,7 @@
     "komatora": "./bin/main.sh"
   },
   "engines": {
-    "node": ">=8.6.0",
+    "node": ">=10",
     "npm": ">=6.0.0"
   },
   "scripts": {
