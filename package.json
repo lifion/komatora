@@ -1,6 +1,6 @@
 {
   "name": "komatora",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Patch management tool to scan local projects dependencies for vulnerabilities",
   "keywords": [],
   "author": "Ani Agajanyan <aganita21@gmail.com>",
@@ -30,9 +30,8 @@
   "scripts": {
     "eslint": "eslint . --ext .js,.json --ignore-pattern='!.*.*'",
     "format": "prettier --write '**/*.{md,js,json}' '!coverage/**/*.{js,json}'",
-    "jest": "jest -c ./.jest.json",
     "prepare": "check-engines",
-    "test": "npm run jest -- --ci --runInBand && codecov",
+    "test": "jest -c ./.jest.json",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "dependencies": {},
@@ -41,7 +40,7 @@
     "check-engines": "^1.5.0",
     "codecov": "^3.6.1",
     "eslint": "^6.6.0",
-    "eslint-config-lifion": "^1.3.2",
+    "eslint-config-lifion": "^1.3.3",
     "husky": "^3.0.9",
     "jest": "^24.9.0",
     "lint-staged": "^9.4.2",
@@ -50,14 +49,14 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run eslint && npm run jest"
+      "pre-push": "npm run eslint && npm test"
     }
   },
   "@lifion/core-commons": {
     "autoDocs": false,
     "nonModuleCli": true,
     "template": "public",
-    "updated": "2019-08-27T00:06:22.034Z",
-    "version": "2.3.3"
+    "updated": "2019-11-11T21:32:37.342Z",
+    "version": "2.3.4"
   }
 }
