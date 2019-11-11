@@ -1,6 +1,6 @@
 {
   "name": "komatora",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Patch management tool to scan local projects dependencies for vulnerabilities",
   "keywords": [],
   "author": "Ani Agajanyan <aganita21@gmail.com>",
