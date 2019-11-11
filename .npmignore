@@ -1,1 +1,8 @@
+*.md
+*.test.js
 /.*
+/assets
+/coverage
+/templates
+__mocks__
+jsconfig.json
